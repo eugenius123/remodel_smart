@@ -1,0 +1,20 @@
+---
+layout: layout.njk
+title: Gallery
+---
+
+<div class="content">
+    <img id="curr" height="300px" src="/img/gallery/001.jpg" />
+    <div>
+        <button onclick="prev()">Prev</button>
+        <button onclick="next()">Next</button>
+    </div>
+</div>
+<script>
+    function prev() {
+        document.getElementById('curr').src = '/img/gallery/001.jpg'
+    }
+    function next() {
+        document.getElementById('curr').src = '/img/gallery/002.jpg'
+    }
+</script>

@@ -1,0 +1,333 @@
+/*
+------------------------------------------------------
+Common
+------------------------------------------------------
+*/
+
+:root {
+    --site-max-width: 1000px;
+    --primary-color: #a09f64;
+    --other-color: #9BE545;
+    --primary-color-rgb: 38, 122, 38;
+    --dark-color: #1b1c1a;
+    --site-margin: calc((100% - var(--site-max-width)) / 2);
+    --horz-padding: 20px;
+    --site-padding: calc(var(--site-margin) + var(--horz-padding));
+    --primary-filter: invert(62%) sepia(17%) saturate(3578%) hue-rotate(20deg) brightness(90%) contrast(109%);
+}
+
+@media all and (max-width: 1000px) {
+    :root {
+        --site-margin: 0px;
+        --horz-padding: 10px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Amiko', sans-serif;
+    color: #464646;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-family: "Red Rose";
+    margin-top: 50px;
+    font-size: 2em;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.facebook {
+    height: 26px;
+}
+
+/*
+------------------------------------------------------
+Header / Nav
+------------------------------------------------------
+*/
+
+header {
+    margin-left: var(--site-margin);
+    max-width: var(--site-max-width);
+    display: flex;
+    padding: 10px var(--horz-padding);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-left: -5px; /* Adjust for logo built in spacing */
+    width: 200px;
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Encode Sans Semi Condensed';
+    font-size: 14px;
+    text-rendering: optimizeLegibility;
+}
+
+nav a {
+    font-size: 0.9em;
+    margin: 0 10px;
+    color: var(--primary-color);
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/*
+------------------------------------------------------
+Banner
+------------------------------------------------------
+*/
+
+.banner {
+    padding: 0 var(--site-padding);
+    background-color: var(--dark-color);
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.proudly {
+    font-family: "Arima Madurai";
+    color: #e7ebbb;
+    letter-spacing: 1px;
+}
+
+.banner .phone {
+    flex: 1;
+    font-size: 0.85em;
+    text-align: right;
+    margin-right: 1em;
+}
+
+/*
+------------------------------------------------------
+Hero / Call to Action
+------------------------------------------------------
+*/
+
+.heroImage {
+    background-image: linear-gradient(to bottom, #00000060, #00000060),
+                      url("img/hero.jpg");
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.heroText {
+    margin-top: 150px;
+    margin-left: var(--site-padding);
+    padding-left: 50px;
+    max-width: var(--site-max-width);
+    height: 100%;
+    color: white;
+    font-family: 'Source Sans Pro';
+}
+
+.catch {
+    text-shadow: 0 0 20px #00000060;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.free {
+    margin-top: 20px;
+    font-family: 'Comic Neue';
+    font-size: 1.5em;
+}
+
+.cta {
+    margin-top: 25px;
+    border: none;
+    padding: 0.8em 1.5em;
+    font-size: 1.15em;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: rgb(44, 44, 36);
+}
+
+/*
+------------------------------------------------------
+Services
+------------------------------------------------------
+*/
+
+#services {
+    padding: 20px var(--site-margin);
+}
+
+#services > div {
+    padding: 20px var(--site-margin);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+#services > div > div {
+    flex: 1 0 29%;
+    padding: 10px;
+    text-align: center;
+    background-color: #f5f5ec;
+    border-radius: 5px;
+}
+
+#services img {
+    filter: var(--primary-filter);
+    width: 32px;
+}
+
+/*
+------------------------------------------------------
+About Us
+------------------------------------------------------
+*/
+
+#about > div:first-of-type {
+    padding: 20px var(--site-padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#about > div:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px;
+    text-align: right;
+    background-color: #e9e6c9;
+    padding: 20px var(--site-padding);
+    color: var(--primary-color)
+}
+
+#about > div > div {
+    width: 300px;
+    height: 100%;
+    background-color: #b3b88d;
+}
+
+#about p {
+    flex: 1;
+    text-align: center;
+    margin: 20px;
+}
+
+/*
+------------------------------------------------------
+Gallery
+------------------------------------------------------
+*/
+
+#gallery {
+    padding: 20px var(--site-padding);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#gallery .images {
+    text-align: center;
+}
+
+#gallery .actions {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    justify-content: center;
+}
+
+/*
+------------------------------------------------------
+Reviews
+------------------------------------------------------
+*/
+
+#reviews {
+    padding: 20px var(--site-padding);
+    text-align: center;
+}
+
+#reviews p {
+    font-size: 1.5em;
+}
+
+/*
+------------------------------------------------------
+Footer
+------------------------------------------------------
+*/
+
+footer {
+    background-color: var(--dark-color);
+    padding: 20px var(--site-padding);
+    display: flex;
+    color: #aaaaaa;
+    margin-top: 50px;
+}
+
+footer > div {
+    flex: 1;
+}
+
+footer h2 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+footer > div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer nav {
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer nav a {
+    font-size: 1.2em;
+    padding: 6px 0;
+}
+
+footer p {
+    text-align: center;
+}

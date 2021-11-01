@@ -9,18 +9,12 @@ Common
     --primary-color: #a09f64;
     --other-color: #9BE545;
     --primary-color-rgb: 38, 122, 38;
+    --heading-family: "Inter";
     --dark-color: #1b1c1a;
     --site-margin: calc((100% - var(--site-max-width)) / 2);
     --horz-padding: 20px;
     --site-padding: calc(var(--site-margin) + var(--horz-padding));
     --primary-filter: invert(62%) sepia(17%) saturate(3578%) hue-rotate(20deg) brightness(90%) contrast(109%);
-}
-
-@media all and (max-width: 1000px) {
-    :root {
-        --site-margin: 0px;
-        --horz-padding: 10px;
-    }
 }
 
 * {
@@ -29,7 +23,7 @@ Common
 
 body {
     margin: 0;
-    font-family: 'Amiko', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #464646;
     font-size: 16px;
     display: flex;
@@ -37,7 +31,8 @@ body {
 }
 
 h2 {
-    font-family: "Red Rose";
+    font-family: var(--heading-family);
+    font-weight: 500;
     margin-top: 50px;
     font-size: 2em;
     color: var(--primary-color);
@@ -56,10 +51,6 @@ button {
     border-radius: 5px;
 }
 
-.facebook {
-    height: 26px;
-}
-
 /*
 ------------------------------------------------------
 Header / Nav
@@ -76,7 +67,7 @@ header {
 }
 
 .logo {
-    margin-left: -5px; /* Adjust for logo built in spacing */
+    margin: 18px 0px 22px -5px; /* Adjust for logo built in spacing */
     width: 200px;
 }
 
@@ -87,7 +78,6 @@ nav {
     justify-content: flex-end;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-family: 'Encode Sans Semi Condensed';
     font-size: 14px;
     text-rendering: optimizeLegibility;
 }
@@ -107,24 +97,27 @@ Banner
 */
 
 .banner {
-    padding: 0 var(--site-padding);
+    padding: 10px var(--site-padding);
     background-color: var(--dark-color);
     color: white;
     display: flex;
     align-items: center;
+    font-size: 1.1em;
 }
 
-.proudly {
-    font-family: "Arima Madurai";
-    color: #e7ebbb;
-    letter-spacing: 1px;
+.affordable {
+    margin-right: 10px;
 }
 
 .banner .phone {
     flex: 1;
-    font-size: 0.85em;
     text-align: right;
     margin-right: 1em;
+    white-space: nowrap;
+}
+
+.banner .facebook {
+    height: 32px;
 }
 
 /*
@@ -141,30 +134,27 @@ Hero / Call to Action
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
-    margin-bottom: 50px;
     position: relative;
 }
 
 .heroText {
     margin-top: 150px;
     margin-left: var(--site-padding);
-    padding-left: 50px;
+    margin-right: 10px;
     max-width: var(--site-max-width);
-    height: 100%;
     color: white;
-    font-family: 'Source Sans Pro';
 }
 
 .catch {
-    text-shadow: 0 0 20px #00000060;
-    font-size: 2.5em;
-    font-weight: bold;
+    font-family: var(--heading-family);
+    font-weight: 700;
+    font-size: 3em;
+    text-transform: uppercase;
 }
 
-.free {
-    margin-top: 20px;
-    font-family: 'Comic Neue';
-    font-size: 1.5em;
+.catch-sub {
+    margin-top: 10px;
+    font-size: 1.2em;
 }
 
 .cta {
@@ -261,15 +251,45 @@ Gallery
     flex-direction: column;
 }
 
-#gallery .images {
-    text-align: center;
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
 }
 
-#gallery .actions {
-    display: flex;
-    padding: 20px;
-    gap: 20px;
-    justify-content: center;
+.project {
+    background-color: #e9e6c9;
+    position: relative;
+}
+
+.project:before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+.project img {
+    filter: brightness(0.8);
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+.project h2 {
+    position: absolute;
+    margin: 0;
+    font-weight: 800;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    grid-column-start: 1;
+    grid-row-start: 1;
 }
 
 /*
@@ -296,12 +316,15 @@ Footer
 footer {
     background-color: var(--dark-color);
     padding: 20px var(--site-padding);
-    display: flex;
     color: #aaaaaa;
     margin-top: 50px;
 }
 
 footer > div {
+    display: flex;
+}
+
+footer > div > div {
     flex: 1;
 }
 
@@ -312,10 +335,18 @@ footer h2 {
     text-align: left;
 }
 
+footer h2:first-of-type {
+    margin-top: 0;
+}
+
 footer > div:last-child {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+footer .facebook {
+    height: 26px;
 }
 
 footer nav {
@@ -330,4 +361,35 @@ footer nav a {
 
 footer p {
     text-align: center;
+    font-size: 0.8em;
+    margin-bottom: 0;
+}
+
+/*
+------------------------------------------------------
+Mobile Support
+------------------------------------------------------
+*/
+
+@media all and (max-width: 1000px) {
+    :root {
+        --site-margin: 0px;
+        --horz-padding: 30px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .catch {
+        font-size: 2.25em;
+    }
+
+    #services > div > div {
+        flex: 1 0 40%;
+    }
+}
+
+@media all and (max-width: 550px) {
+    header {
+        flex-direction: column;
+    }
 }

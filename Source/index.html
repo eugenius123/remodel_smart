@@ -1,180 +1,208 @@
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Pompiere&family=Open+Sans&family=Open+Sans+Condensed:ital,wght@1,300&family=Inter:wght@100;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css" />
-        <title>Remodel Smart</title>
-    </head>
-    <body>
-        <header>
-            <a class="logo" href="/">
-                <img src="img/logo.svg" alt="Company logo" />
-            </a>
-            <nav>
-                <a href="#services">Services</a>
-                <a href="#about">About</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </header>
-        <div class="banner">
-            <p class="affordable">Affordable Renovations</p>
-            <a class="phone" href="tel:4123533090">412-353-3090</a>
-            <a href="https://www.facebook.com/RemodelSmartPGH">
-                <img class="facebook" src="img/facebook.svg" />
-            </a>
+---
+layout: main.njk
+---
+
+<div class="heroImage">
+    <div class="heroText">
+        <div class="catch">Proudly Serving Pittsburgh!</div>
+        <div class="catch-sub">Fully Insured and Licenced</div>
+        <div class="catch-sub">Free Estimates</div>
+        <a href="#gallery"><button class="cta">See Gallery</button></a>
+    </div>
+</div>
+<section id="services">
+    <h2><a href="">Our Services</a></h2>
+    <div>
+        <div>
+            <img src="img/services/additions.svg" alt="Additions" />
+            <h3>Additions</h3>
+            Room Additions
         </div>
-        <div class="heroImage">
-            <div class="heroText">
-                <div class="catch">Proudly Serving Pittsburgh!</div>
-                <div class="catch-sub">Fully Insured and Licenced</div>
-                <div class="catch-sub">Free Estimates</div>
-                <button class="cta">See Gallery</button>
-            </div>
+        <div>
+            <img src="img/services/decks.svg" alt="Decks" />
+            <h3>Decks</h3>
+            Decks
         </div>
-        <section id="services">
-            <h2><a href="#">Our Services</a></h2>
-            <div>
-                <div>
-                    <img src="img/services/additions.svg" alt="Additions" />
-                    <h3>Additions</h3>
-                    Room Additions
-                </div>
-                <div>
-                    <img src="img/services/decks.svg" alt="Decks" />
-                    <h3>Decks</h3>
-                    Decks
-                </div>
-                <div>
-                    <img src="img/services/demolition.svg" alt="Demolition" />
-                    <h3>Demolition</h3>
-                    Demolition
-                </div>
-                <div>
-                    <img src="img/services/door.svg" alt="Doors" />
-                    <h3>Doors</h3>
-                    Installation, Repair
-                </div>
-                <div>
-                    <img src="img/services/drywall.svg" alt="Drywall" />
-                    <h3>Drywall</h3>
-                    Installation, Repair
-                </div>
-                <div>
-                    <img src="img/services/electrical.svg" alt="Electrical" />
-                    <h3>Electrical</h3>
-                    Recessed Lighting, Light Fixtures, Ceiling Fans
-                </div>
-                <div>
-                    <img src="img/services/fencing.svg" alt="Fencing" />
-                    <h3>Fencing</h3>
-                    Fencing
-                </div>
-                <div>
-                    <img src="img/services/flooring.svg" alt="Flooring" />
-                    <h3>Flooring</h3>
-                    Vinyl, Hardwood, Engineered Wood
-                </div>
-                <div>
-                    <img src="img/services/gutters.svg" alt="Gutters" />
-                    <h3>Gutters</h3>
-                    Gutters
-                </div>
-                <div>
-                    <img src="img/services/painting.svg" alt="Painting" />
-                    <h3>Painting</h3>
-                    Exterior / Interior
-                </div>
-                <div>
-                    <img src="img/services/remodeling.svg" alt="Remodeling" />
-                    <h3>Remodeling</h3>
-                    Bathroom, Kitchen, Sun Room, Bedroom, Basement
-                </div>
-                <div>
-                    <img src="img/services/renovation.svg" alt="Renovations" />
-                    <h3>Renovations</h3>
-                    Indoor / Outdoor
-                </div>
-                <div>
-                    <img src="img/services/roofing.svg" alt="Roofing" />
-                    <h3>Roofing</h3>
-                    Replacement, Reroofing, New Roof
-                </div>
-                <div>
-                    <img src="img/services/siding.svg" alt="Siding" />
-                    <h3>Siding</h3>
-                    Siding
-                </div>
-                <div>
-                    <img src="img/services/windows.svg" alt="Windows" />
-                    <h3>Windows</h3>
-                    Replacement / Installation
-                </div>
-                <div>
-                    <img src="img/services/residential-and-commercial.svg" alt="Residential &amp; Commercial " />
-                    <h3>Residential &amp; Commercial </h3>
-                    Residential &amp; Commercial 
-                </div>
-            </div>
-        </section>
-        <section id="about">
-            <h2><a href="#">About Us</a></h2>
-            <div>
-                <div></div>
-                <p>We are great!</p>
-            </div>
-            <div>
-                <p>and we are awesome!</p>
-                <div></div>
-            </div>
-        </section>
-        <section id="gallery">
-            <h2><a href="#">Gallery</a></h2>
-            <div class="projects">
-                <div class="project">
-                    <img src="img/gallery/franklin_park/0.jpg" />
-                    <h2>Franklin Park</h2>
-                </div>
-                <div class="project">
-                    <img src="img/gallery/001.jpg" />
-                    <h2>Franklin Park</h2>
-                </div>
-                <div class="project">
-                    <img src="img/gallery/001.jpg" />
-                    <h2>Franklin Park</h2>
-                </div>
-            </div>
-        </section>
-        <section id="reviews">
-            <h2><a href="#">Reviews</a></h2>
+        <div>
+            <img src="img/services/demolition.svg" alt="Demolition" />
+            <h3>Demolition</h3>
+            Demolition
+        </div>
+        <div>
+            <img src="img/services/door.svg" alt="Doors" />
+            <h3>Doors</h3>
+            Installation, Repair
+        </div>
+        <div>
+            <img src="img/services/drywall.svg" alt="Drywall" />
+            <h3>Drywall</h3>
+            Installation, Repair
+        </div>
+        <div>
+            <img src="img/services/electrical.svg" alt="Electrical" />
+            <h3>Electrical</h3>
+            Recessed Lighting, Light Fixtures, Ceiling Fans
+        </div>
+        <div>
+            <img src="img/services/fencing.svg" alt="Fencing" />
+            <h3>Fencing</h3>
+            Fencing
+        </div>
+        <div>
+            <img src="img/services/flooring.svg" alt="Flooring" />
+            <h3>Flooring</h3>
+            Vinyl, Hardwood, Engineered Wood
+        </div>
+        <div>
+            <img src="img/services/gutters.svg" alt="Gutters" />
+            <h3>Gutters</h3>
+            Gutters
+        </div>
+        <div>
+            <img src="img/services/painting.svg" alt="Painting" />
+            <h3>Painting</h3>
+            Exterior / Interior
+        </div>
+        <div>
+            <img src="img/services/remodeling.svg" alt="Remodeling" />
+            <h3>Remodeling</h3>
+            Bathroom, Kitchen, Sun Room, Bedroom, Basement
+        </div>
+        <div>
+            <img src="img/services/renovation.svg" alt="Renovations" />
+            <h3>Renovations</h3>
+            Indoor / Outdoor
+        </div>
+        <div>
+            <img src="img/services/roofing.svg" alt="Roofing" />
+            <h3>Roofing</h3>
+            Replacement, Reroofing, New Roof
+        </div>
+        <div>
+            <img src="img/services/siding.svg" alt="Siding" />
+            <h3>Siding</h3>
+            Siding
+        </div>
+        <div>
+            <img src="img/services/windows.svg" alt="Windows" />
+            <h3>Windows</h3>
+            Replacement / Installation
+        </div>
+        <div>
+            <img src="img/services/residential-and-commercial.svg" alt="Residential &amp; Commercial " />
+            <h3>Residential &amp; Commercial </h3>
+            Residential &amp; Commercial 
+        </div>
+    </div>
+</section>
+<section id="about">
+    <h2><a href="">About Us</a></h2>
+    <div>
+        <div></div>
+        <p>We are great!</p>
+    </div>
+    <div>
+        <p>and we are awesome!</p>
+        <div></div>
+    </div>
+</section>
+<section id="gallery">
+    <h2><a href="">Gallery</a></h2>
+    <div class="projects">
+        <div class="project">
+            <img src="img/gallery/franklin_park/0.jpg" />
+            <a href="gallery/franklin_park"><h2>Franklin Park</h2></a>
+        </div>
+        <div class="project">
+            <img src="img/gallery/001.jpg" />
+            <a href="gallery/franklin_park"><h2>Franklin Park</h2></a>
+        </div>
+        <div class="project">
+            <img src="img/gallery/001.jpg" />
+            <a href="gallery/franklin_park"><h2>Franklin Park</h2></a>
+        </div>
+    </div>
+</section>
+<section id="reviews">
+    <h2><a href="#">Reviews</a></h2>
+    <div class="slideshow">
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <div class="slide fade">
             <p>
                 "They are great!"
             </p>
-        </section>
-        <footer>
-            <div>
-                <div id="contact">
-                    <h2><a href="#">Contact Us</a></h2>
-                    For free estimates:
-                    <div class="phone">Call/Text: 412-353-3090</div>
-                    <a class="email" href="mailto:Jsuh03@gmail.com">jsuh03@gmail.com</a>
-                    <h2>Follow Us</h2>
-                    <a href="https://www.facebook.com/RemodelSmartPGH">
-                        <img class="facebook" src="img/facebook.svg" />
-                    </a>
-                </div>
-                <div>
-                    <nav>
-                        <a href="#services">Services</a>
-                        <a href="#about">About</a>
-                        <a href="#gallery">Gallery</a>
-                        <a href="#contact">Contact</a>
-                    </nav>
-                </div>
-            </div>
-            <p>&copy; Copyright goes here</p>
-        </footer>
-    </body>
-</html>
+        </div>
+        <div class="slide fade">
+            <p>
+                "They are awesome!"
+            </p>
+        </div>
+        <div class="slide fade">
+            <p>
+                "They did a good job."
+            </p>
+        </div>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+    <div style="text-align:center">
+        <span class="dot" onclick="setSlide(1)"></span>
+        <span class="dot" onclick="setSlide(2)"></span>
+        <span class="dot" onclick="setSlide(3)"></span>
+    </div>
+</section>
+<script>
+    var slideIndex = 1;
+    showSlide(slideIndex);
+
+    function plusSlides(n) {
+        showSlide(slideIndex += n);
+    }
+
+    function setSlide(n) {
+        showSlide(slideIndex = n);
+    }
+
+    function showSlide(n) {
+        var i
+        var slides = document.getElementsByClassName("slide")
+        var dots = document.getElementsByClassName("dot")
+
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none"
+        }
+
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "")
+        }
+
+        slides[slideIndex - 1].style.display = "block"
+        dots[slideIndex - 1].className += " active"
+    }
+
+    function showSlides2() {
+        var i
+        var slides = document.getElementsByClassName("mySlides")
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none"
+        }
+
+        slideIndex++;
+
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlide, 2000); // Change image every 2 seconds
+    }
+</script>

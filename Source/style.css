@@ -45,10 +45,35 @@ a {
 }
 
 button {
+    cursor: pointer;
     border: none;
     padding: 10px 20px;
     font-size: 1em;
     border-radius: 5px;
+}
+
+/*
+------------------------------------------------------
+Nav (Common)
+------------------------------------------------------
+*/
+
+nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    text-rendering: optimizeLegibility;
+}
+
+nav a {
+    font-size: 0.9em;
+    margin: 0 10px;
+    color: var(--primary-color);
+    font-weight: bold;
+    white-space: nowrap;
 }
 
 /*
@@ -72,29 +97,8 @@ header {
 }
 
 nav {
-    flex: 1;
-    display: flex;
-    align-items: center;
     justify-content: flex-end;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 14px;
-    text-rendering: optimizeLegibility;
 }
-
-nav a {
-    font-size: 0.9em;
-    margin: 0 10px;
-    color: var(--primary-color);
-    font-weight: bold;
-    white-space: nowrap;
-}
-
-/*
-------------------------------------------------------
-Banner
-------------------------------------------------------
-*/
 
 .banner {
     padding: 10px var(--site-padding);
@@ -294,6 +298,23 @@ Gallery
 
 /*
 ------------------------------------------------------
+Gallery Thumbnails
+------------------------------------------------------
+*/
+
+#thumbnails {
+    padding: 20px var(--site-margin);
+    padding: 10px var(--horz-padding);
+    display: flex;
+    gap: 20px;
+}
+
+#thumbnails img {
+    width: 200px;
+}
+
+/*
+------------------------------------------------------
 Reviews
 ------------------------------------------------------
 */
@@ -305,6 +326,66 @@ Reviews
 
 #reviews p {
     font-size: 1.5em;
+}
+
+.slideshow {
+    display: flex;
+    align-items: center;
+    background-color: #b3b88d;
+    height: 200px;
+}
+
+.slide {
+    display: none;
+    flex: 1;
+}
+
+.slideshow .prev,
+.slideshow .next {
+    cursor: pointer;
+    user-select: none;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+}
+
+.prev {
+    border-radius: 0 6px 6px 0;
+}
+
+.next {
+    border-radius: 6px 0 0 6px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
 }
 
 /*

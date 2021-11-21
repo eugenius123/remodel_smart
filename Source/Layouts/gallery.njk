@@ -1,0 +1,25 @@
+---
+layout: main.njk
+projectName: "None"
+imageCount: 0
+---
+
+<div>
+    <h2 id="project"></h2>
+    <div id="thumbnails" />
+    <script>
+        const projectName = "{{ projectName }}"
+        const imageCount = "{{ imageCount }}"
+
+        document.getElementById("project").innerHTML =
+            projectName.replace("_", " ").replace(/\w\S*/g, x => x.charAt(0).toUpperCase() + x.substr(1))
+
+        const imageContainer = document.getElementById("thumbnails")
+
+        for (i = 0; i < imageCount; i++) {
+            img = document.createElement("img")
+            img.src = `/img/gallery/${projectName}/thumbnails/${i}.jpg`
+            imageContainer.append(img)
+        }
+    </script>
+</div>

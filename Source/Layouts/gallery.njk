@@ -6,20 +6,112 @@ imageCount: 0
 
 <div>
     <h2 id="project"></h2>
-    <div id="thumbnails" />
+    <div id="thumbnails"></div>
+    <div id="viewer" onclick="closeViewer()">
+        <div onclick="event.stopPropagation()">
+            <div class="image">
+                <img id="display" src="/img/gallery/franklin_park/thumbnails/1.jpg" />
+                <div class="buttons">
+                    <div class="prev" onclick="showPrev()"><div><img src="/img/next.svg" /></div></div>
+                    <div class="next" onclick="showNext()"><div><img src="/img/next.svg" /></div></div>
+                </div>
+            </div>
+            <div class="control">
+                <button class="play" onclick="timer ? pause() : play()"><img src="/img/play.svg" /></button>
+                <button class="prev" onclick="showPrev()"><img src="/img/play.svg" /></button>
+                <button class="next" onclick="showNext()"><img src="/img/play.svg" /></button>
+                <span class="caption">1/5</span>
+                <button class="close" onclick="closeViewer()"><img src="/img/close.svg" /></button>
+            </div>
+        </div>
+    </div>
+    <template id="thumbnailTemplate">
+        <div class="thumbnail" onclick="showImg(this)" data-index="">
+            <img class="thumb" />
+            <div class="magnify">
+                <img src="/img/magnify.svg" />
+            </div>
+        </div>
+    </template>
     <script>
         const projectName = "{{ projectName }}"
         const imageCount = "{{ imageCount }}"
+        const imageContainer = document.getElementById("thumbnails")
+        const template = document.getElementById("thumbnailTemplate")
+        const viewer = document.getElementById("viewer")
+        const playImg = document.querySelector(".play img")
+        const caption = document.querySelector(".caption")
+        var currIndex = 0
+        var timer = null
 
         document.getElementById("project").innerHTML =
             projectName.replace("_", " ").replace(/\w\S*/g, x => x.charAt(0).toUpperCase() + x.substr(1))
 
-        const imageContainer = document.getElementById("thumbnails")
 
         for (i = 0; i < imageCount; i++) {
-            img = document.createElement("img")
-            img.src = `/img/gallery/${projectName}/thumbnails/${i}.jpg`
-            imageContainer.append(img)
+            var thumbnail = template.content.cloneNode(true)
+            var img = thumbnail.querySelector(".thumb")
+            img.src = getPathForIndex(i)
+            imageContainer.append(thumbnail)
+        }
+
+        function showImg(thumbnail) {
+            currIndex = [...thumbnail.parentElement.children].indexOf(thumbnail)
+            loadImg(currIndex)
+            showViewer()
+        }
+
+        function play() {
+            playImg.src = "/img/pause.svg"
+            scheduleNext()
+        }
+
+        function pause() {
+            if (timer) {
+                playImg.src = "/img/play.svg"
+                clearTimeout(timer)
+                timer = null
+            }
+        }
+
+        function playNext() {
+            showNext()
+            scheduleNext()
+        }
+
+        function scheduleNext() {
+            timer = setTimeout(playNext, 3000)
+        }
+
+        function showPrev() {
+            console.log(currIndex)
+            currIndex = currIndex > 0 ? currIndex - 1 : imageCount - 1
+            console.log(currIndex)
+            loadImg(currIndex)
+        }
+
+        function showNext() {
+            currIndex = currIndex < imageCount - 1 ? currIndex + 1 : 0
+            loadImg(currIndex)
+        }
+
+        function showViewer() {
+            viewer.style.display = "flex"
+        }
+
+        function closeViewer() {
+            viewer.style.display = "none"
+            pause()
+        }
+
+        function loadImg(index) {
+            var display = document.getElementById("display")
+            display.src = getPathForIndex(currIndex)
+            caption.innerHTML = `${index + 1}/${imageCount}`
+        }
+
+        function getPathForIndex(i) {
+            return `/img/gallery/${projectName}/thumbnails/${i}.jpg`
         }
     </script>
 </div>

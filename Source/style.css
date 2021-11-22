@@ -11,10 +11,13 @@ Common
     --primary-color-rgb: 38, 122, 38;
     --heading-family: "Inter";
     --dark-color: #1b1c1a;
+    --meduim-color: #555555;
     --site-margin: calc((100% - var(--site-max-width)) / 2);
     --horz-padding: 20px;
     --site-padding: calc(var(--site-margin) + var(--horz-padding));
     --primary-filter: invert(62%) sepia(17%) saturate(3578%) hue-rotate(20deg) brightness(90%) contrast(109%);
+    --dark-color-filter: invert(9%) sepia(6%) saturate(471%) hue-rotate(47deg) brightness(93%) contrast(94%);
+    --medium-color-filter: invert(30%) sepia(55%) saturate(17%) hue-rotate(30deg) brightness(91%) contrast(84%);
 }
 
 * {
@@ -303,14 +306,191 @@ Gallery Thumbnails
 */
 
 #thumbnails {
-    padding: 20px var(--site-margin);
+    margin: 20px var(--site-margin);
     padding: 10px var(--horz-padding);
     display: flex;
     gap: 20px;
 }
 
-#thumbnails img {
+.thumbnail {
+    display: grid;
+    grid-template-areas: "main";
+    justify-items: center;
+    align-items: center;
+}
+
+.thumbnail img:first-child {
     width: 200px;
+    cursor: pointer;
+    grid-area: main;
+    border-radius: 5px;
+}
+
+.thumbnail .magnify {
+    position: relative;
+    display: none;
+    justify-items: center;
+    align-items: center;
+    grid-area: main;
+    background-color: #242424;
+    border-radius: 22px;
+    width: 44px;
+    height: 44px;
+}
+
+.thumbnail:hover .magnify {
+    display: block;
+}
+
+.thumbnail .magnify img {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    width: 20px;
+    filter: invert(97%) sepia(11%) saturate(511%) hue-rotate(218deg) brightness(119%) contrast(100%);
+}
+
+#viewer {
+    display: none;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#viewer > div {
+    background-color: white;
+    padding: 6px;
+    min-width: 1px;
+    min-height: 1px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#viewer .image {
+    position: relative;
+    margin-bottom: 6px;
+}
+
+#viewer .image > img {
+    display: block;
+    max-width: calc(100%);
+    max-height: calc(100vh - 80px);
+    border-radius: 5px;
+}
+
+#viewer .buttons img,
+#viewer .control img {
+    filter: var(--medium-color-filter);
+}
+
+#viewer .image .buttons {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#viewer .image .prev,
+#viewer .image .next {
+    flex: 1;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#viewer .image .prev {
+    justify-content: flex-start;
+}
+
+#viewer .image .next {
+    right: 0;
+    justify-content: flex-end;
+}
+
+#viewer .image .prev div,
+#viewer .image .next div {
+    display: none;
+    padding: 5px 10px;
+    background-color: white;
+}
+
+#viewer .image .prev div {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+#viewer .image .next div {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+#viewer .image .prev:hover div,
+#viewer .image .next:hover div {
+    display: inline-block;
+}
+
+#viewer .image .prev div img,
+#viewer .image .next div img {
+    height: 10px;
+}
+
+#viewer .image .prev div img {
+    transform: scaleX(-1);
+}
+
+#viewer .control {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#viewer .control button {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid #ccc;
+}
+
+#viewer .control .prev,
+#viewer .control .next {
+    height: 20px;
+    width: 20px;
+}
+
+#viewer .control img {
+    height: 50%;
+}
+
+#viewer .play img,
+#viewer .next img {
+    margin-left: 10%;
+}
+
+#viewer .control .prev img {
+    transform: scaleX(-1);
+}
+
+#viewer .caption {
+    flex: 1;
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+#viewer .close img {
+    height: 40%;
 }
 
 /*
@@ -351,15 +531,16 @@ Reviews
     transition: 0.6s ease;
 }
 
-.prev {
+.slideshow .prev {
     border-radius: 0 6px 6px 0;
 }
 
-.next {
+.slideshow .next {
     border-radius: 6px 0 0 6px;
 }
 
-.prev:hover, .next:hover {
+.slideshow .prev:hover,
+.slideshow .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 

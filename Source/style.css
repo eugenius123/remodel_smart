@@ -309,6 +309,8 @@ Gallery Thumbnails
     margin: 20px var(--site-margin);
     padding: 10px var(--horz-padding);
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
 }
 

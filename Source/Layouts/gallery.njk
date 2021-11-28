@@ -106,7 +106,7 @@ imageCount: 0
 
         function loadImg(index) {
             var display = document.getElementById("display")
-            display.src = getPathForIndex(currIndex)
+            display.src = getPathForIndex(currIndex).replace('/thumbnails/', '/')
             caption.innerHTML = `${index + 1}/${imageCount}`
         }
 

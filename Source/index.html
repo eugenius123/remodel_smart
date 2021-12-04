@@ -3,11 +3,13 @@ layout: main.njk
 ---
 
 <div class="heroImage">
-    <div class="heroText">
-        <div class="catch">Proudly Serving Pittsburgh!</div>
-        <div class="catch-sub">Fully Insured and Licenced</div>
-        <div class="catch-sub">Free Estimates</div>
-        <a href="#gallery"><button class="cta">See Gallery</button></a>
+    <div class="heroContainer">
+        <div class="heroText">
+            <div class="catch">Proudly Serving Pittsburgh!</div>
+            <div class="fullyInsured">Fully Insured and Licenced</div>
+            <div class="freeEstimates">Free Estimates</div>
+        </div>
+        <a href="#gallery"><button class="cta">View Gallery</button></a>
     </div>
 </div>
 <section id="services">
@@ -21,12 +23,10 @@ layout: main.njk
         <div>
             <img src="img/services/decks.svg" alt="Decks" />
             <h3>Decks</h3>
-            Decks
         </div>
         <div>
             <img src="img/services/demolition.svg" alt="Demolition" />
             <h3>Demolition</h3>
-            Demolition
         </div>
         <div>
             <img src="img/services/door.svg" alt="Doors" />
@@ -46,7 +46,6 @@ layout: main.njk
         <div>
             <img src="img/services/fencing.svg" alt="Fencing" />
             <h3>Fencing</h3>
-            Fencing
         </div>
         <div>
             <img src="img/services/flooring.svg" alt="Flooring" />
@@ -56,7 +55,6 @@ layout: main.njk
         <div>
             <img src="img/services/gutters.svg" alt="Gutters" />
             <h3>Gutters</h3>
-            Gutters
         </div>
         <div>
             <img src="img/services/painting.svg" alt="Painting" />
@@ -81,7 +79,6 @@ layout: main.njk
         <div>
             <img src="img/services/siding.svg" alt="Siding" />
             <h3>Siding</h3>
-            Siding
         </div>
         <div>
             <img src="img/services/windows.svg" alt="Windows" />
@@ -91,24 +88,46 @@ layout: main.njk
         <div>
             <img src="img/services/residential-and-commercial.svg" alt="Residential &amp; Commercial " />
             <h3>Residential &amp; Commercial </h3>
-            Residential &amp; Commercial 
         </div>
     </div>
 </section>
 <section id="about">
     <h2><a href="">About Us</a></h2>
     <div>
-        <div></div>
-        <p>We are great!</p>
+        <div>
+            <p>
+                Affordable and stress free remodeling with Remodel Smart.
+            </p>
+        </div>
+        <p>
+            Remodel Smart takes pride in being one of the best and most reliable
+            home improvement contractors in Pittsburgh. Offering services for
+            kitchen & bathroom remodeling, patio covers & decks, room additions,
+            concrete, custom showers, electrical, plumbing and much more.
+        </p>
     </div>
     <div>
-        <p>and we are awesome!</p>
-        <div></div>
+        <p>
+            We have years of home improvement experience. Offering free in-home
+            consultations where we take note of all your wishes and ideas then
+            develop a detailed proposal for your project!
+        </p>
+        <div>
+            <p>
+                Please check out our photo gallery to see some of our recent projects.
+            </p>
+        </div>
     </div>
 </section>
 <section id="gallery">
-    <h2><a href="">Gallery</a></h2>
+    <h2><a href="">Recent Projects</a></h2>
     <div class="projects">
+        <div class="project">
+            <a href="gallery/wexford">
+                <img src="img/gallery/wexford/0.jpg" />
+                <h2>Wexford</h2>
+            </a>
+        </div>
         <div class="project">
             <a href="gallery/franklin_park">
                 <img src="img/gallery/franklin_park/0.jpg" />
@@ -141,17 +160,23 @@ layout: main.njk
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <div class="slide fade">
             <p>
-                "They are great!"
+                "I can't thank Eugene and his team enough for our new house renovation.
+                They offered quality service at a very competitve price. We updated our
+                whole house including painting, floor, basement, and bathrooms. They
+                incredibly fast, keeping with the proposed timeline while not sacrificing
+                quality. They also came back and made adjustments to tweaks we wanted. I
+                highly recommend Eugene and his team."
+                -Abi S.
             </p>
         </div>
         <div class="slide fade">
             <p>
-                "They are awesome!"
-            </p>
-        </div>
-        <div class="slide fade">
-            <p>
-                "They did a good job."
+                "The guys did a great job! They came 8am and left 5pm every time they
+                came to work. They delivered on what we agreed on. Once we made sure
+                we provided detailed instructions, the work was done according to what
+                we planned. Overall we are very happy with the work, timeliness, and
+                cost."
+                - Mark W
             </p>
         </div>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -160,7 +185,6 @@ layout: main.njk
     <div style="text-align:center">
         <span class="dot" onclick="setSlide(1)"></span>
         <span class="dot" onclick="setSlide(2)"></span>
-        <span class="dot" onclick="setSlide(3)"></span>
     </div>
 </section>
 <script>

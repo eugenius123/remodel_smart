@@ -7,9 +7,9 @@ Common
 :root {
     --site-max-width: 1000px;
     --primary-color: #a09f64;
-    --other-color: #9BE545;
+    --highlight-color: #00bb22; /* Made darker than #00cc33 */
     --primary-color-rgb: 38, 122, 38;
-    --heading-family: "Inter";
+    --heading-family: 'Montserrat', sans-serif;
     --dark-color: #1b1c1a;
     --meduim-color: #555555;
     --site-margin: calc((100% - var(--site-max-width)) / 2);
@@ -35,10 +35,10 @@ body {
 
 h2 {
     font-family: var(--heading-family);
-    font-weight: 500;
+    font-weight: normal;
     margin-top: 50px;
-    font-size: 2em;
-    color: var(--primary-color);
+    font-size: 1.5em;
+    color: var(--highlight-color);
     text-align: center;
 }
 
@@ -74,7 +74,7 @@ nav {
 nav a {
     font-size: 0.9em;
     margin: 0 10px;
-    color: var(--primary-color);
+    color: var(--highlight-color);
     font-weight: bold;
     white-space: nowrap;
 }
@@ -142,36 +142,48 @@ Hero / Call to Action
     background-size: cover;
     height: 500px;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
-.heroText {
-    margin-top: 150px;
+.heroContainer {
     margin-left: var(--site-padding);
     margin-right: 10px;
     max-width: var(--site-max-width);
     color: white;
 }
 
+.heroText {
+    font-size: 3em;
+}
+
 .catch {
     font-family: var(--heading-family);
     font-weight: 700;
-    font-size: 3em;
     text-transform: uppercase;
 }
 
-.catch-sub {
-    margin-top: 10px;
-    font-size: 1.2em;
+.fullyInsured {
+    font-family: var(--heading-family);
+    font-weight: 300;
+    font-size: 0.9em;
+}
+
+.freeEstimates {
+    font-family: var(--heading-family);
+    font-size: 0.9em;
+    font-style: italic;
+    font-weight: 100;
 }
 
 .cta {
     margin-top: 25px;
     border: none;
     padding: 0.8em 1.5em;
-    font-size: 1.15em;
+    text-transform: uppercase;
     border-radius: 5px;
-    background-color: var(--primary-color);
-    color: rgb(44, 44, 36);
+    background-color: var(--highlight-color);
+    color: white;
 }
 
 /*
@@ -502,7 +514,6 @@ Reviews
 */
 
 #reviews {
-    padding: 20px var(--site-padding);
     text-align: center;
 }
 
@@ -511,10 +522,13 @@ Reviews
 }
 
 .slideshow {
+    background-image: url(img/reviews-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px var(--site-padding);
     display: flex;
     align-items: center;
     background-color: #b3b88d;
-    height: 200px;
 }
 
 .slide {
@@ -543,7 +557,6 @@ Reviews
 
 .slideshow .prev:hover,
 .slideshow .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .dot {
@@ -597,6 +610,7 @@ footer h2 {
     margin-bottom: 10px;
     font-size: 1.5em;
     text-align: left;
+    color: #777;
 }
 
 footer h2:first-of-type {
@@ -621,6 +635,7 @@ footer nav {
 footer nav a {
     font-size: 1.2em;
     padding: 6px 0;
+    color: #777;
 }
 
 footer p {

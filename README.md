@@ -32,13 +32,18 @@
 
 # To-Do
 - Find better background for reviews section
-- Purchase Font that other website uses
-- Clean up icons for services
-- make services take up less room
+- Finish up about us section
+- Make fonts sizes for gallery photo links look better on smaller screens
+- Make look good on mobile
+- Set keywords
+- Make services take up less room
   - maybe see more...
   - or make smaller boxes
+- Purchase remodel-smart.com
+- Figure out hosting
 
 # Done
+- Clean up icons for services
 - Use blured background image like in summitet.com for maybe reviews background
 - Stretch review background color box across screen
 - Add reviews from Jeremy's email

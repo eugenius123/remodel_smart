@@ -7,7 +7,7 @@
    viewBox="0 0 64 64"
    version="1.1"
    id="svg5"
-   inkscape:version="1.1 (ce6663b3b7, 2021-05-25)"
+   inkscape:version="1.1.1 (eb90963e84, 2021-10-02)"
    sodipodi:docname="roofing.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -22,7 +22,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="true"
      inkscape:document-units="px"
-     showgrid="false"
+     showgrid="true"
      showborder="true"
      inkscape:showpageshadow="false"
      borderlayer="true"
@@ -31,12 +31,16 @@
      inkscape:zoom="11.765625"
      inkscape:cx="32"
      inkscape:cy="32"
-     inkscape:window-width="1920"
+     inkscape:window-width="1864"
      inkscape:window-height="1136"
-     inkscape:window-x="0"
+     inkscape:window-x="56"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid822" />
+  </sodipodi:namedview>
   <defs
      id="defs2" />
   <g
@@ -44,8 +48,9 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
-       d="M 9.3209947,44.20023 32.976371,14.849293 56.740144,42.260909"
-       id="path1621" />
+       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 6,44 32,15 58,44"
+       id="path1621"
+       sodipodi:nodetypes="ccc" />
   </g>
 </svg>

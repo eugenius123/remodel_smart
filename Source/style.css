@@ -8,7 +8,7 @@ Common
     --site-max-width: 1000px;
     --primary-color: #a09f64;
     --highlight-color: #00bb22; /* Made darker than #00cc33 */
-    --primary-color-rgb: 38, 122, 38;
+    --primary-color-rgb: 160, 159, 100;
     --heading-family: 'Montserrat', sans-serif;
     --dark-color: #1b1c1a;
     --meduim-color: #555555;
@@ -211,6 +211,7 @@ Services
     text-align: center;
     background-color: #f5f5ec;
     border-radius: 5px;
+    font-size: 0.8em;
 }
 
 #services img {
@@ -224,37 +225,42 @@ About Us
 ------------------------------------------------------
 */
 
+#about > div {
+    align-items: center;
+    justify-content: space-around;
+}
+
 #about > div:first-of-type {
     padding: 20px var(--site-padding);
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 300px;
     background-color: var(--primary-color);
     color: white;
 }
 
-#about > div:last-child {
+#about > div:last-of-type {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 300px;
-    text-align: right;
-    background-color: #e9e6c9;
+    flex-direction: row-reverse;
+    background-color: rgba(160, 159, 100, 0.4);
     padding: 20px var(--site-padding);
     color: var(--primary-color)
 }
 
 #about > div > div {
-    width: 300px;
-    height: 100%;
-    background-color: #b3b88d;
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    font-size: 1.1em;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.05);
 }
 
 #about p {
     flex: 1;
     text-align: center;
     margin: 20px;
+    max-width: 450px;
 }
 
 /*
@@ -523,8 +529,8 @@ Reviews
 
 .slideshow {
     background-image: url(img/reviews-background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat-x repeat-y;
+    background-position: center;
     padding: 20px var(--site-padding);
     display: flex;
     align-items: center;
@@ -541,7 +547,6 @@ Reviews
     cursor: pointer;
     user-select: none;
     padding: 16px;
-    color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -653,17 +658,40 @@ Mobile Support
 @media all and (max-width: 1000px) {
     :root {
         --site-margin: 0px;
-        --horz-padding: 30px;
     }
 }
 
 @media all and (max-width: 600px) {
-    .catch {
+    .heroText {
         font-size: 2.25em;
+    }
+
+    #services > div {
+        gap: 10px;
     }
 
     #services > div > div {
         flex: 1 0 40%;
+    }
+
+    #about > div:first-of-type {
+        flex-direction: column;
+    }
+
+    #about > div:last-of-type {
+        flex-direction: column-reverse;
+    }
+
+    .projects {
+        gap: 10px;
+    }
+
+    .project h2 {
+        font-size: 1.1em;
+    }
+
+    #reviews p {
+        font-size: 1.15em;
     }
 }
 

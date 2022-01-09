@@ -7,7 +7,7 @@
    viewBox="0 0 64 64"
    version="1.1"
    id="svg5"
-   inkscape:version="1.1 (ce6663b3b7, 2021-05-25)"
+   inkscape:version="1.1.1 (eb90963e84, 2021-10-02)"
    sodipodi:docname="painting.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -22,21 +22,25 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="true"
      inkscape:document-units="px"
-     showgrid="false"
+     showgrid="true"
      showborder="true"
      inkscape:showpageshadow="false"
      borderlayer="true"
      units="px"
      width="64px"
      inkscape:zoom="11.765625"
-     inkscape:cx="32"
-     inkscape:cy="32"
-     inkscape:window-width="1920"
+     inkscape:cx="25.710491"
+     inkscape:cy="33.784861"
+     inkscape:window-width="1864"
      inkscape:window-height="1136"
-     inkscape:window-x="0"
+     inkscape:window-x="56"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid823" />
+  </sodipodi:namedview>
   <defs
      id="defs2" />
   <g
@@ -44,12 +48,14 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
-       d="m 28.0849,39.907614 v 16.007227 h 5.360973 V 39.866638 H 54.082794 V 23.959734 h -5.152302 v 1.73216 h 3.277686 V 37.91995 H 27.775902 Z"
-       id="path1953" />
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 25,64 h 9 V 44 H 31 V 41 H 56 V 23 h -7 v 3 h 4 V 38 H 28 v 6 h -3 z"
+       id="path1953"
+       sodipodi:nodetypes="ccccccccccccccc" />
     <path
-       style="fill:#000000;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
-       d="M 49.199478,19.502664 V 29.674666 H 11.199255 v -9.948594 z"
-       id="path1955" />
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 50,19 V 30 H 10 V 19 Z"
+       id="path1955"
+       sodipodi:nodetypes="ccccc" />
   </g>
 </svg>

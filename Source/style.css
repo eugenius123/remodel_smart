@@ -6,16 +6,16 @@ Common
 
 :root {
     --site-max-width: 1000px;
-    --primary-color: #a09f64;
+    --primary-color: #806C46;
     --highlight-color: #00bb22; /* Made darker than #00cc33 */
-    --primary-color-rgb: 160, 159, 100;
+    --primary-color-rgb: 128, 108, 70;
     --heading-family: 'Montserrat', sans-serif;
     --dark-color: #1b1c1a;
     --meduim-color: #555555;
     --site-margin: calc((100% - var(--site-max-width)) / 2);
     --horz-padding: 20px;
     --site-padding: calc(var(--site-margin) + var(--horz-padding));
-    --primary-filter: invert(62%) sepia(17%) saturate(3578%) hue-rotate(20deg) brightness(90%) contrast(109%);
+    --primary-filter: invert(42%) sepia(35%) saturate(408%) hue-rotate(1deg) brightness(95%) contrast(97%);
     --dark-color-filter: invert(9%) sepia(6%) saturate(471%) hue-rotate(47deg) brightness(93%) contrast(94%);
     --medium-color-filter: invert(30%) sepia(55%) saturate(17%) hue-rotate(30deg) brightness(91%) contrast(84%);
 }
@@ -209,7 +209,7 @@ Services
     flex: 1 0 29%;
     padding: 10px;
     text-align: center;
-    background-color: #f5f5ec;
+    background-color: rgba(var(--primary-color-rgb), 0.1);
     border-radius: 5px;
     font-size: 0.8em;
 }
@@ -240,7 +240,7 @@ About Us
 #about > div:last-of-type {
     display: flex;
     flex-direction: row-reverse;
-    background-color: rgba(160, 159, 100, 0.4);
+    background-color: rgba(var(--primary-color-rgb), 0.5);
     padding: 20px var(--site-padding);
     color: var(--primary-color)
 }
@@ -528,13 +528,17 @@ Reviews
 }
 
 .slideshow {
-    background-image: url(img/reviews-background.jpg);
-    background-repeat: repeat-x repeat-y;
-    background-position: center;
+    background:
+        repeating-linear-gradient(
+            -45deg,
+            rgba(var(--primary-color-rgb), 0.04), 0px,
+            rgba(var(--primary-color-rgb), 0.04) 50px,
+            rgba(var(--primary-color-rgb), 0) 50px,
+            rgba(var(--primary-color-rgb), 0) 100px );
     padding: 20px var(--site-padding);
     display: flex;
     align-items: center;
-    background-color: #b3b88d;
+    background-color: rgba(var(--primary-color-rgb), 0.1);
 }
 
 .slide {

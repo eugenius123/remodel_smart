@@ -227,7 +227,7 @@ About Us
 
 #about > div {
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 #about > div:first-of-type {

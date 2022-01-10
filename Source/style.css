@@ -234,7 +234,7 @@ About Us
     padding: 20px var(--site-padding);
     display: flex;
     background-color: var(--primary-color);
-    color: white;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 #about > div:last-of-type {
@@ -242,7 +242,7 @@ About Us
     flex-direction: row-reverse;
     background-color: rgba(var(--primary-color-rgb), 0.5);
     padding: 20px var(--site-padding);
-    color: var(--primary-color)
+    color: rgba(0, 0, 0, 0.6);
 }
 
 #about > div > div {

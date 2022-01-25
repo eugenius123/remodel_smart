@@ -334,15 +334,15 @@ Gallery Thumbnails
 }
 
 .thumbnail {
+    cursor: pointer;
     display: grid;
     grid-template-areas: "main";
     justify-items: center;
     align-items: center;
 }
 
-.thumbnail img:first-child {
+.thumbnail .thumb {
     width: 200px;
-    cursor: pointer;
     grid-area: main;
     border-radius: 5px;
 }
